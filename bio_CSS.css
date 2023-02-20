@@ -27,19 +27,91 @@ html{
 }
 img{
   max-width: 100%;
+  max-height: 100%;
 }
 
 header{
-  background-color: #E3B559;
-  color: #5990E3;
-  padding: 20px;
+  font-weight: bold;
+  font-size: 150%;
+  background-color: #565600;
+  color: #E3B559;
+  border: 0;
+  margin: 0;
+  padding:10px;
   text-align: center;
+  font-family: Inter, Arimo, 'IBM Plex Sans' sans-serif;
 }
 
 h1{
   font-weight: 400;
 }
 
+#container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#navbar{
+  position: sticky;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  top: 0;
+  background: white;
+}
+
+.flexi-1, .flexi-2,.flexi-3, .flexi-4, .flexi-5{
+  /*color: blue;*/
+  margin: 0 5%;
+  padding-top: 30px;
+}
+
+.flexi-1, .flexi-3, .flexi-4{
+  display: flex;
+  flex-direction: row;
+}
+.flexi-1 #content, .flexi-3 #content{
+  padding-left: 30px;
+}
+.flexi-2, .flexi-5{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.flexi-2 #content, .flexi-5 #content{
+  padding-right: 30px;
+}
+#image{
+  width: 50%;
+  /*background: blue;*/
+  align-content: center;
+}
+#content{
+  width: 50%;
+  line-height: 30px;
+
+}
+
+/*Photos*/
+#profileP{
+  border-radius: 50%;
+}
+#UWP{
+
+}
+#work{
+  border-radius: 50%;
+}
+#guitar{
+}
+#FAA{
+  width: 75%;
+  height: auto;
+}
+#FPV{
+}
+#mini{
+}
 
 body{
   font-family: Inter, Arimo, 'IBM Plex Sans', sans-serif;
@@ -74,7 +146,7 @@ footer a:hover{
 #navbar a{
   float: left;
   display: block;
-  color: #E3B559;
+  color: #799F35;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;

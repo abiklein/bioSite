@@ -21,6 +21,8 @@
 
 html{
   box-sizing: border-box;
+  height: 100%;
+  width:100%;
 }
 *,*:before, *:after{
   box-sizing: inherit;
@@ -31,20 +33,73 @@ img{
 }
 
 header{
-  font-weight: bold;
+  font-weight: 700;
   font-size: 150%;
-  background-color: #565600;
-  color: #E3B559;
+  background-color: #1D4D96;
+  color: #5990E3;
   border: 0;
   margin: 0;
   padding:10px;
   text-align: center;
-  font-family: Inter, Arimo, 'IBM Plex Sans' sans-serif;
 }
 
 h1{
-  font-weight: 400;
+  font-family: 'Inter', 'Arimo', 'IBM Plex Sans' sans-serif;
+  font-weight: 700;
 }
+
+/*Home page*/
+#background{
+  height: 100%;
+  width: 100%;
+}
+.home-container{
+  position: relative;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+.overlay-img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.dropdown{
+  position: absolute;
+  display: inline-block;
+  color: white;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.drop-content{
+  display: none;
+  position: absolute;
+  background-color: none;
+  min-width: 160px;
+  padding: 12px 16px;
+  z-index: 1;
+  text-align: left;
+  left: -38%;
+}
+.drop-content a{
+  padding: 3px;
+  display: list-item;
+  list-style: none;
+  color: rgba(255, 255, 255, 0.5);
+  border-style: 2px solid rgba(255,255,255,0.5);
+  text-decoration: none;
+}
+.drop-content a:hover{
+  color: rgba(255, 255, 255, 1.0);
+  border-style: 2px solid rgba(255,255,255,1.0);
+}
+.dropdown:hover .drop-content{
+  display: block;
+}
+
+
 
 #container{
   display: flex;
@@ -114,6 +169,11 @@ h1{
 }
 
 body{
+  margin: 0;
+  border: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
   font-family: Inter, Arimo, 'IBM Plex Sans', sans-serif;
 }
 
@@ -122,13 +182,13 @@ footer{
   padding-right: 10px;
   font-weight: 400;
   font-style: italic;
-  background-color: #785E2A;
+  background-color: #E3B559;
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 footer p{
-  color: #E3B559;
+  color: #FFD278;
   font-weight: bold;
   float: right;
   padding-right: 10px;
@@ -136,9 +196,10 @@ footer p{
 }
 footer a{
   text-decoration: none;
-  color: #E3B559;
+  color: #FFD278;
 }
 footer a:hover{
+  color: #785E2A;
   text-decoration: underline;
 }
 
@@ -146,24 +207,40 @@ footer a:hover{
 #navbar a{
   float: left;
   display: block;
-  color: #799F35;
+  color: #E3B559;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 #navbar a:hover{
-  background-color: #E3B559;
-  color: #5990E3;
+  background-color: #FFD278;
+  color: #785E2A;
 }
 
 /*new type of code to help with responsive design*/
 /*In plain terms, it says "when the screen is a minium width, activate these style
 rules." The rules follow inside of the curly brackets like any other CSS*/
 @media screen and (min-width: 768px){
-
+    .dropdown{
+      position: absolute;
+      display: inline-block;
+      color: white;
+      top: 54.5%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.3em;
+    }
 
   }
 @media screen and (min-width: 1024px){
-
+    .dropdown{
+      position: absolute;
+      display: inline-block;
+      color: white;
+      top: 56%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.5em;
+    }
 
   }

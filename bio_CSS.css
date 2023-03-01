@@ -35,8 +35,8 @@ img{
 header{
   font-weight: 700;
   font-size: 150%;
-  background-color: #1D4D96;
-  color: #5990E3;
+  background-color: #5990E3;
+  color: #1D4D96;
   border: 0;
   margin: 0;
   padding:10px;
@@ -48,16 +48,33 @@ h1{
   font-weight: 700;
 }
 
+a{
+  color: #785E2A;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #E3B559;
+  text-decoration: underline;
+}
+
+a:visited{
+  text-decoration: none;
+}
 /*Home page*/
 #background{
-  height: 100%;
-  width: 100%;
+  position: relative;
+  max-height: 300%;
+  max-width: 300%;
+  left: -100%;
 }
 .home-container{
   position: relative;
   text-align: center;
   height: 100%;
   width: 100%;
+  overflow: hidden;
+
 }
 .overlay-img{
   position: absolute;
@@ -100,7 +117,7 @@ h1{
 }
 
 
-
+/*About Page*/
 #container{
   display: flex;
   flex-direction: column;
@@ -123,21 +140,23 @@ h1{
 }
 
 .flexi-1, .flexi-3, .flexi-4{
-  display: flex;
+  display: inline-block;
   flex-direction: row;
 }
 .flexi-1 #content, .flexi-3 #content{
   padding-left: 30px;
+  width: 100%;
 }
 .flexi-2, .flexi-5{
-  display: flex;
+  display: inline-block;
   flex-direction: row-reverse;
 }
 .flexi-2 #content, .flexi-5 #content{
   padding-right: 30px;
+  width: 100%;
 }
 #image{
-  width: 50%;
+  width: 100%;
   /*background: blue;*/
   align-content: center;
 }
@@ -150,9 +169,12 @@ h1{
 /*Photos*/
 #profileP{
   border-radius: 50%;
+  max-height: 90%;
+  max-width: 90%;
 }
 #UWP{
-
+  max-height: 90%;
+  max-width: 90%;
 }
 #work{
   border-radius: 50%;
@@ -177,31 +199,35 @@ body{
   font-family: Inter, Arimo, 'IBM Plex Sans', sans-serif;
 }
 
+/*Footer*/
 footer{
-  float: right;
-  padding-right: 10px;
   font-weight: 400;
-  font-style: italic;
   background-color: #E3B559;
   position: absolute;
-  bottom: 0;
   width: 100%;
 }
 footer p{
-  color: #FFD278;
   font-weight: bold;
   float: right;
   padding-right: 10px;
-  font-style: italic;
 }
 footer a{
   text-decoration: none;
-  color: #FFD278;
+  color: white;
 }
 footer a:hover{
   color: #785E2A;
   text-decoration: underline;
 }
+.grid{
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  padding: 20px;
+  padding-left: 60px;
+  grid-gap: 10px;
+  column-gap: 50px;
+}
+
 
 /*address link*/
 #navbar a{
@@ -221,6 +247,10 @@ footer a:hover{
 /*In plain terms, it says "when the screen is a minium width, activate these style
 rules." The rules follow inside of the curly brackets like any other CSS*/
 @media screen and (min-width: 768px){
+  /*Home Page*/
+  #background{
+    left: -70%;
+  }
     .dropdown{
       position: absolute;
       display: inline-block;
@@ -229,6 +259,10 @@ rules." The rules follow inside of the curly brackets like any other CSS*/
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: 1.3em;
+    }
+
+    .flexi-1, .flexi-2, .flexi-3, .flexi-4, .flexi-5{
+      display: flex;
     }
 
   }
@@ -241,6 +275,11 @@ rules." The rules follow inside of the curly brackets like any other CSS*/
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: 1.5em;
+    }
+    #background{
+      height: 100%;
+      width: 100%;
+      left: 0;
     }
 
   }

@@ -1,7 +1,7 @@
 /*
   Abigail Klein
-  Module 7.2 Assignment
-  February 3, 2023
+  Module 12 Assignment
+  March 3, 2023
 
   Color Scheme:
   #785E2A
@@ -44,7 +44,7 @@ header{
 }
 
 h1{
-  font-family: 'Inter', 'Arimo', 'IBM Plex Sans' sans-serif;
+  font-family: 'Inter', 'Arimo', 'IBM Plex Sans', sans-serif;
   font-weight: 700;
 }
 
@@ -93,7 +93,7 @@ a:visited{
 .drop-content{
   display: none;
   position: absolute;
-  background-color: none;
+  background-color: rgba(255, 0, 0, 0);
   min-width: 160px;
   padding: 12px 16px;
   z-index: 1;
@@ -105,12 +105,10 @@ a:visited{
   display: list-item;
   list-style: none;
   color: rgba(255, 255, 255, 0.5);
-  border-style: 2px solid rgba(255,255,255,0.5);
   text-decoration: none;
 }
 .drop-content a:hover{
   color: rgba(255, 255, 255, 1.0);
-  border-style: 2px solid rgba(255,255,255,1.0);
 }
 .dropdown:hover .drop-content{
   display: block;
@@ -143,7 +141,7 @@ a:visited{
   display: inline-block;
   flex-direction: row;
 }
-.flexi-1 #content, .flexi-3 #content{
+.flexi-1 .content, .flexi-3 .content{
   padding-left: 30px;
   width: 100%;
 }
@@ -151,16 +149,16 @@ a:visited{
   display: inline-block;
   flex-direction: row-reverse;
 }
-.flexi-2 #content, .flexi-5 #content{
+.flexi-2 .content, .flexi-5 .content{
   padding-right: 30px;
   width: 100%;
 }
-#image{
+.image{
   width: 100%;
   /*background: blue;*/
   align-content: center;
 }
-#content{
+.content{
   width: 50%;
   line-height: 30px;
 
